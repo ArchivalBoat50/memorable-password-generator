@@ -1,0 +1,5 @@
+### Here we contain a list of tasks to be completed or that have been completed:
+## We divide the code into two main parts:
+	( )PassMeter - with an algorithm to check for password complexity.
+	( )EasyPass - a mnemonic password generator
+
