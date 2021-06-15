@@ -21,6 +21,7 @@ S_CHANGER_U = '$$'
 # A list of most common words in English (Just for illustration purposes)
 list_of_words = ['time', 'person', 'year', 'way', 'day', 'thing', 'man', 'world', 'life', 'hand', 'part', 'child', 'eye', 'woman', 'place', 'work', 'week', 'case', 'point', 'government',
     'company', 'number', 'group', 'problem', 'fact']
+user_list = []
 
 # Complexity of the password:
     # 1 - 
@@ -104,12 +105,15 @@ def generatePass():
     pass_str = ''
 
     # Randomly choose 2-3 word
-    rand_pass_len = randint(2, 3)
+    rand_pass_len = randint(2, 5)
 
     # Creates a password from words
     for i in range(rand_pass_len):
         # Randomly choose a words
-        pass_str = pass_str + list_of_words[randint(0, len(list_of_words)-1)]
+        if (randint(0, 100)) % 2 == 0:
+            pass_str = pass_str + user_list[randint(0, len(user_list)-1)]
+        else:
+           pass_str = pass_str + list_of_words[randint(0, len(list_of_words)-1)]
 
     # Add uppercase at random
     if is_uppercase:
@@ -127,6 +131,15 @@ def generatePass():
 
 # MAIN:
 def main():
+
+    print("Please enter real words, as there is no error detection.")
+
+    u_in = '_'
+    while(u_in != ''):
+        print("Enter empty string to skip...")
+        u_in = input("Please enter a word for password generation: ")
+        user_list.append(u_in)
+
     pass_str = ''
     while(len(pass_str) != pass_length):
         pass_str = generatePass()
