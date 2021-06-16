@@ -3,6 +3,7 @@ import re
 lengthLevel = None                  #Gives relative value for password length (1-  <8, 2-  >=8 & <12, 3- >=12)
 charLevel = None                    #Gives relative value for character 'complexity' (1- upper and lower case, 2- upper or lowercase, 3- no letters)
 includesDigits = None
+
 lowerRegex = re.compile(r'[a-z]+')      # Regex function for finding lowercase letters
 upperRegex = re.compile(r'[A-Z]+')      # Regex function for finding uppercase letters
 digitRegex = re.compile(r'[0-9]+')      # Regex function for finding digits
@@ -36,7 +37,6 @@ def hasDigits (password):
 
 
 def passwordStrength():
-
     passwordText = input('Enter Password: ')
 
     passwordLength(passwordText)
