@@ -1,4 +1,4 @@
-
+import regex 
 # Settings
 BAR_LESS_VERY_LOW = 10
 BAR_LESS_LOW = 50
@@ -33,8 +33,10 @@ def passDigits(password):
     return num
 
 def passSymbols(password):
-    num = 0
-    return num
+    num_of_symbol = len(re.sub('[\w]+' ,'', password))
+    if debug_mod:
+        print((len(password)-num_of_symbol)*NUM_CHAR_MULT/2)
+    return len(password)-num_of_symbol)*NUM_CHAR_MULT/2
 
 def passSimple(password):
     num = 0
