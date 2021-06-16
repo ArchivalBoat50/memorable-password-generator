@@ -1,0 +1,44 @@
+import re
+
+lengthLevel = None
+charLevel = None
+includesDigits = None
+lowerRegex = re.compile(r'[a-z]+')      # Regex function for finding lowercase letters
+upperRegex = re.compile(r'[A-Z]+')      # Regex function for finding uppercase letters
+digitRegex = re.compile(r'[0-9]+')      # Regex function for finding digits
+
+def passwordLength (password):
+
+    if passwordText.len() < 8:
+        lengthLevel = 0
+    elif passwordText.len() >= 8 and passwordText.len() < 12:
+        lengthLevel = 1
+    elif passwordText.len() >= 12:
+        lengthLevel = 2
+
+
+def characterCases (password):
+    if upperRegex.findall(password) and lowerRegex.findall(password):
+        charLevel = 2
+    elif upperRegex.findall(password) or lowerRegex.findall(password):
+        charLevel = 1
+    elif
+        print("You have not entered any characters: ")
+        charLevel =0
+
+def hasDigits (password):
+    if digitRegex.findall(password):
+        includesDigits = True
+    elif
+        includesDigits = False
+
+
+def passwordStrength():
+    # Enter password text
+    passwordText = input('Enter Password: ')
+
+    passwordLength(passwordText)
+    characterCases(passwordText)
+    hasDigits(passwordText)
+
+    if
