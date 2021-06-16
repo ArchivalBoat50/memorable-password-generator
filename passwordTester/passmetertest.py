@@ -34,11 +34,18 @@ def hasDigits (password):
 
 
 def passwordStrength():
-    # Enter password text
+
     passwordText = input('Enter Password: ')
 
     passwordLength(passwordText)
     characterCases(passwordText)
     hasDigits(passwordText)
 
-    if
+
+
+"""             very_weak        weak    medium      strong
+passwordLength   <8              >=8     >=8 & <=12  >=12
+upperRegex       yes or          yes     yes         yes
+lowerRegex       yes             yes     yes         yes
+digitRegex       no              no      yes         yes
+"""
