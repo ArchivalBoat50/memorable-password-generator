@@ -21,11 +21,11 @@ def mneumonicPass(wordList, complexity):
 
 
 def main():
-    print("Complexity of 1 \n")
-    print(mneumonicPass(list1, 1))
-    print("Complexity of 2 \n")
+    print("Complexity of 1")
+    print(mneumonicPass(list1, 1), "\n")
+    print("Complexity of 2")
     print(mneumonicPass(list1, 2), "\n")
-    print("Complexity of 3 \n")
+    print("Complexity of 3")
     print(mneumonicPass(list1, 3))
 
 main()
